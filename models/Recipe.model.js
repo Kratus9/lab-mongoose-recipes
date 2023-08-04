@@ -10,7 +10,7 @@ const recipeSchema = new Schema({
   level: {
     type: String,
     enum: ["Easy Peasy", "Amateur Chef", "UltraPro Chef"]},
-  ingredients: {type: [String]},
+  ingredients: [String],
   cuisine: {
     type: String,
     required: true},
@@ -23,7 +23,7 @@ const recipeSchema = new Schema({
   duration: {
     type: Number,
     min: 0},
-  creator:{String},
+  creator: String,
   created: {
     type: Date,
     default: "03/08/2023"}
